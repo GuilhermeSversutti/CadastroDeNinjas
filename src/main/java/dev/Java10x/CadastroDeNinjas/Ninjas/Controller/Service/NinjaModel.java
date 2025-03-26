@@ -1,9 +1,12 @@
-package dev.Java10x.CadastroDeNinjas;
+package dev.Java10x.CadastroDeNinjas.Ninjas.Controller.Service;
 
+import dev.Java10x.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 // JPA = Java Persistence API
 
@@ -16,9 +19,17 @@ public class NinjaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     private String nome;
+
     private String email;
+
     private int idade;
+
+    // @ManyToOne -- Um ninja tem uma unica missão
+    @ManyToOne
+    @JoinColumn(name = "missoes_id") // Forneing key ou Chave Estrangeira
+    private MissoesModel missoes;
 
     //No args = Contrutor sem argumentos
     public NinjaModel() {
