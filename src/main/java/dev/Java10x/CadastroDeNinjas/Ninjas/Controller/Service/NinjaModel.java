@@ -1,6 +1,7 @@
 package dev.Java10x.CadastroDeNinjas.Ninjas.Controller.Service;
 
 import dev.Java10x.CadastroDeNinjas.Missoes.MissoesModel;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -32,6 +33,7 @@ public class NinjaModel {
 
     private String nome;
 
+    @Column(unique = true) // Essa coluna precisa ser unica, nao pode ter duplicata
     private String email;
 
     private int idade;
