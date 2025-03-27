@@ -7,10 +7,20 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 
 @Entity
 @Table(name = "tb_missoes")
+
+// Lombok
+@Data // Cria todos os Getters E Setters
+@NoArgsConstructor // Cria os construtores sem argumentos
+@AllArgsConstructor // Cria os construtores com argumentos
+
 public class MissoesModel {
 
     @Id
