@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/ninjas")
 public class NinjaController {
@@ -16,6 +18,11 @@ public class NinjaController {
         return "Essa é a minha primeira mensagem nessa rota";
     }
 
+    private NinjaService ninjaService;
+
+    public NinjaController(NinjaService ninjaService) {
+        this.ninjaService = ninjaService;
+    }
     // CRUD
 
     // Adicionar ninja (CREATE)
@@ -26,9 +33,10 @@ public class NinjaController {
 
     // MOSTRAR TODOS OS NINJAS (READ)
     @GetMapping("/listar")// Mostrar
-    public String mostrarTodosOsNinjas(){
-        return "Mostrar ninja";
+    public List<NinjaModel> listarNinjas(){
+        return ninjaService.listarNinjas();
     }
+
     // MOSTRAR NINJA POR ID (READ)
     @GetMapping("/listarID")// Mostrar
     public String mostrarTodosOsNinjasPorId(){
