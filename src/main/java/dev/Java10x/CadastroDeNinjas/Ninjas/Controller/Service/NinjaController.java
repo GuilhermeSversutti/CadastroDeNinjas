@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping
+@RequestMapping("/ninjas")
 public class NinjaController {
 
     @GetMapping("/boasVindas")
@@ -25,12 +25,12 @@ public class NinjaController {
     }
 
     // MOSTRAR TODOS OS NINJAS (READ)
-    @GetMapping("/todos")// Mostrar
+    @GetMapping("/listar")// Mostrar
     public String mostrarTodosOsNinjas(){
         return "Mostrar ninja";
     }
     // MOSTRAR NINJA POR ID (READ)
-    @GetMapping("/todosID")// Mostrar
+    @GetMapping("/listarID")// Mostrar
     public String mostrarTodosOsNinjasPorId(){
         return "Mostrar Ninja por ID";
     }
