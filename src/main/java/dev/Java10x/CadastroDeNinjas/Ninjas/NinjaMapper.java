@@ -1,4 +1,4 @@
-package dev.Java10x.CadastroDeNinjas.Ninjas.Controller.Service;
+package dev.Java10x.CadastroDeNinjas.Ninjas;
 
 import org.springframework.stereotype.Component;
 

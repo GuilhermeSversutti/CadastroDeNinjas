@@ -1,7 +1,7 @@
 package dev.Java10x.CadastroDeNinjas.Missoes;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import dev.Java10x.CadastroDeNinjas.Ninjas.Controller.Service.NinjaModel;
+import dev.Java10x.CadastroDeNinjas.Ninjas.NinjaModel;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

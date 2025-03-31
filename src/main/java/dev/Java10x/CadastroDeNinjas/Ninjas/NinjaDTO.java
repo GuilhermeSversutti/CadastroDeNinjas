@@ -1,4 +1,4 @@
-package dev.Java10x.CadastroDeNinjas.Ninjas.Controller.Service;
+package dev.Java10x.CadastroDeNinjas.Ninjas;
 
 import dev.Java10x.CadastroDeNinjas.Missoes.MissoesModel;
 import lombok.AllArgsConstructor;
